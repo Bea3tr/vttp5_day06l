@@ -97,7 +97,7 @@ public class App {
         Comparator<Person> compareMultiple = Comparator.comparing(Person::getFirstName)
                                                         .thenComparing(Person::getLastName);
         persons.sort(compareMultiple);
-        persons.forEach(p -> System.out.println(p));
+        //persons.forEach(p -> System.out.println(p));
 
         List<Person> filteredPerson = new ArrayList<>();
         filteredPerson = persons.stream()       
