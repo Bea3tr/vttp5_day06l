@@ -99,6 +99,17 @@ public class App {
         persons.sort(compareMultiple);
         //persons.forEach(p -> System.out.println(p));
 
+        MyInterface<Integer> addOperation = (a, b) -> {
+            return a + b;
+        };
+
+        MyInterface<Integer> multiplyOperation = (a, b) -> {
+            return a * b;
+        };
+
+        System.out.println("addOperation: " + addOperation.process(3, 2));
+        System.out.println("multiplyOperation: " + multiplyOperation.process(3, 2));
+
         List<Person> filteredPerson = new ArrayList<>();
         filteredPerson = persons.stream()       
                         .filter(person -> person.getSalary() < 30000.0)
